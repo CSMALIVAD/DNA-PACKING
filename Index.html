@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DNA Packing Hierarchy</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: white;
+  margin: 40px;
+}
+h1 {
+  text-align: center;
+}
+svg {
+  width: 100%;
+  height: auto;
+}
+.label { font-size: 16px; }
+.small { font-size: 14px; }
+.scale { font-size: 14px; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1>DNA Packing from Double Helix to Metaphase Chromosome</h1>
+
+<svg viewBox="0 0 1000 2600">
+
+<!-- 1 DNA Double Helix -->
+<text x="50" y="80" class="label">1) DNA Double Helix</text>
+<path d="M50 120 Q100 80 150 120 T250 120 T350 120 T450 120"
+stroke="black" fill="none" stroke-width="2"/>
+<path d="M50 140 Q100 100 150 140 T250 140 T350 140 T450 140"
+stroke="black" fill="none" stroke-width="2"/>
+<text x="500" y="130" class="scale">2 nm</text>
+
+<!-- Arrow -->
+<line x1="250" y1="160" x2="250" y2="210" stroke="black" stroke-width="2"/>
+<polygon points="245,210 255,210 250,220" fill="black"/>
+
+<!-- 2 Nucleosome -->
+<text x="50" y="260" class="label">
+2) Nucleosome (147 bp DNA around histone octamer: H2A, H2B, H3, H4)
+</text>
+
+<circle cx="200" cy="330" r="40" stroke="black" fill="none" stroke-width="2"/>
+<line x1="100" y1="330" x2="300" y2="330" stroke="black" stroke-width="2"/>
+
+<text x="320" y="320" class="small">Linker DNA + H1</text>
+<text x="450" y="335" class="scale">10 nm fiber</text>
+
+<!-- Arrow -->
+<line x1="250" y1="380" x2="250" y2="430" stroke="black" stroke-width="2"/>
+<polygon points="245,430 255,430 250,440" fill="black"/>
+
+<!-- 3 30 nm Fiber -->
+<text x="50" y="480" class="label">3) 30 nm Chromatin Fiber (Solenoid / Zig-zag model)</text>
+
+<path d="M100 540 C150 500 200 580 250 540
+         C300 500 350 580 400 540
+         C450 500 500 580 550 540"
+stroke="black" fill="none" stroke-width="4"/>
+
+<text x="600" y="550" class="scale">30 nm (model)</text>
+
+<!-- Arrow -->
+<line x1="250" y1="580" x2="250" y2="630" stroke="black" stroke-width="2"/>
+<polygon points="245,630 255,630 250,640" fill="black"/>
+
+<!-- 4 Looped Domains -->
+<text x="50" y="680" class="label">
+4) Looped Chromatin Domains (~300 nm) attached to Scaffold (SAR/MAR)
+</text>
+
+<path d="M150 740 
+         Q200 680 250 740
+         Q300 800 350 740
+         Q400 680 450 740
+         Q500 800 550 740"
+stroke="black" fill="none" stroke-width="2"/>
+
+<line x1="120" y1="780" x2="580" y2="780"
+stroke="black" stroke-dasharray="5,5"/>
+
+<text x="600" y="740" class="small">CTCF / Cohesin anchors</text>
+<text x="650" y="760" class="scale">300 nm</text>
+
+<!-- Arrow -->
+<line x1="250" y1="820" x2="250" y2="870" stroke="black" stroke-width="2"/>
+<polygon points="245,870 255,870 250,880" fill="black"/>
+
+<!-- 5 Condensed Chromatid -->
+<text x="50" y="920" class="label">
+5) Condensed Chromatid (Single DNA molecule fully compacted)
+</text>
+
+<rect x="220" y="960" width="80" height="250"
+rx="40" ry="40"
+stroke="black" fill="none" stroke-width="3"/>
+
+<text x="330" y="1080" class="scale">~700 nm</text>
+<text x="220" y="1225" class="small">Telomere</text>
+
+<!-- Arrow -->
+<line x1="260" y1="1240" x2="260" y2="1290" stroke="black" stroke-width="2"/>
+<polygon points="255,1290 265,1290 260,1300" fill="black"/>
+
+<!-- 6 Metaphase Chromosome -->
+<text x="50" y="1350" class="label">
+6) Metaphase Chromosome (Two Sister Chromatids)
+</text>
+
+<rect x="200" y="1400" width="80" height="300"
+rx="40" ry="40"
+stroke="black" fill="none" stroke-width="3"/>
+
+<rect x="350" y="1400" width="80" height="300"
+rx="40" ry="40"
+stroke="black" fill="none" stroke-width="3"/>
+
+<!-- Centromere -->
+<rect x="260" y="1520" width="140" height="60"
+rx="15"
+stroke="black" fill="none" stroke-width="2"/>
+
+<text x="270" y="1510" class="small">Centromere</text>
+<text x="460" y="1580" class="scale">~1400 nm</text>
+<text x="200" y="1720" class="small">Telomere</text>
+<text x="350" y="1720" class="small">Telomere</text>
+
+</svg>
+
+</body>
+</html>
